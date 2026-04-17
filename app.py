@@ -14,14 +14,35 @@ st.markdown("""
         }
         #MainMenu {visibility: hidden;}
         .stDeployButton {display:none;}
-        header {visibility: hidden;}
         footer {visibility: hidden;}
         #stDecoration {display:none;}
-        [data-testid="stToolbar"] {display: none !important;}
-        [data-testid="stStatusWidget"] {display: none !important;}
-        [data-testid="stAppViewContainer"] > .main .block-container {
-            padding-top: 1.5rem;
+        /* 1. 隐藏右下角的 Streamlit 徽章 */
+        [data-testid="stViewerBadge"] {
+            display: none !important;
         }
+
+        /* 2. 隐藏底部的 "Made with Streamlit" 脚注 */
+        footer {
+            visibility: hidden;
+        }
+
+        /* 3. 隐藏顶部的装饰线和菜单 */
+        header {
+            visibility: hidden;
+        }
+        #MainMenu {
+            visibility: hidden;
+        }
+        .stDeployButton {
+            display: none;
+        }
+        
+        /* 4. 移除多余的边距，让页面更紧凑 */
+        .block-container {
+            padding-top: 1.5rem;
+            padding-bottom: 0rem;
+        }
+            
     </style>
 """, unsafe_allow_html=True)
 
