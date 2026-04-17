@@ -264,6 +264,29 @@ st.markdown(
         background: linear-gradient(135deg, #63cdda, #77ecb9);
         color: white;
     }
+
+    /* 上传组件中文化：覆盖 Streamlit 默认英文文案 */
+    [data-testid="stFileUploaderDropzone"] button {
+        font-size: 0 !important;
+    }
+    [data-testid="stFileUploaderDropzone"] button::after {
+        content: "选择图片";
+        font-size: 0.95rem;
+    }
+    [data-testid="stFileUploaderDropzoneInstructions"] div {
+        font-size: 0 !important;
+    }
+    [data-testid="stFileUploaderDropzoneInstructions"] div::after {
+        content: "拖拽图片到此处";
+        font-size: 0.95rem;
+    }
+    [data-testid="stFileUploaderDropzoneInstructions"] small {
+        font-size: 0 !important;
+    }
+    [data-testid="stFileUploaderDropzoneInstructions"] small::after {
+        content: "支持 PNG、JPG、JPEG、WEBP 格式";
+        font-size: 0.8rem;
+    }
 </style>
 """,
     unsafe_allow_html=True,
@@ -479,7 +502,7 @@ with text_col:
     uploaded_image = st.file_uploader(
         "🖼️ 上传聊天记录/邮件截图（支持点击上传或拖拽到此）",
         type=["png", "jpg", "jpeg", "webp"],
-        help="系统将调用 Qwen-VL 自动识别图片中的文字；可与上方文本一起分析",
+        help="系统将调用视觉大模型自动识别图片中的文字；可与上方文本一起分析",
     )
     st.caption("你可以只输入文本、只上传截图，或两者同时使用。")
     if uploaded_image is not None:
@@ -495,7 +518,7 @@ with button_col:
 
         ocr_text = ""
         if uploaded_image is not None:
-            with st.spinner("正在使用 Qwen-VL 识别截图文本..."):
+            with st.spinner("正在使用视觉大模型识别截图文本..."):
                 try:
                     ocr_text = extract_text_from_image(uploaded_image)
                 except Exception as e:
