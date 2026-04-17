@@ -14,8 +14,14 @@ st.markdown("""
         }
         #MainMenu {visibility: hidden;}
         .stDeployButton {display:none;}
+        header {visibility: hidden;}
         footer {visibility: hidden;}
         #stDecoration {display:none;}
+        [data-testid="stToolbar"] {display: none !important;}
+        [data-testid="stStatusWidget"] {display: none !important;}
+        [data-testid="stAppViewContainer"] > .main .block-container {
+            padding-top: 1.5rem;
+        }
     </style>
 """, unsafe_allow_html=True)
 
