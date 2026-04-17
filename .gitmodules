@@ -1,0 +1,6 @@
+[submodule "Fraud-msg_Classification"]
+	path = Fraud-msg_Classification
+	url = https://github.com/NZJ-Jimmy/Fraud-msg_Classification
+[submodule "Anti-fruad_KG_Construct"]
+	path = Anti-fruad_KG_Construct
+	url = https://github.com/NZJ-Jimmy/Anti-fruad_KG_Construct

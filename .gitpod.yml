@@ -1,0 +1,4 @@
+tasks:
+  - init: 
+      pip install -r requirements.txt
+      wget https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvYy82YWE4YmQ4MzYxZWQ0NTkwL0VYT1F5WktPTnJSUG1vdENncVVodVI4QjZ4MV9uMjVfMDhFTGdlOHNURF9Fcnc_ZT05ZXB4WE4.pth -O model/final_model.pth
