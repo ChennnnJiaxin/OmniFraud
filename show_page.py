@@ -20,16 +20,25 @@ def apply_page_style():
 
         /* 与 search/risk/recognize 统一的标题风格 */
         .main-title {
-            color: #F1C40F;
+            color: #FFFFFF;
             font-size: 2.5em;
             text-align: center;
             padding: 20px;
-            border-bottom: 3px solid #F1C40F;
+            border-bottom: 3px solid #FFFFFF;
             animation: titleAnimation 0.5s ease-out;
         }
 
+        [data-testid="stAppViewContainer"],
+        [data-testid="stMain"] {
+            background: #000000 !important;
+        }
+
+        [data-testid="stMainBlockContainer"] {
+            background: #000000 !important;
+        }
+
         .section-title {
-            color: #B8860B;
+            color: #F1C40F;
             font-size: 1.4rem;
             font-weight: 700;
             margin: 0.3rem 0 0.45rem 0;
@@ -38,19 +47,19 @@ def apply_page_style():
         .article-title {
             font-size: 1.35rem;
             font-weight: 700;
-            color: #5f4a06;
+            color: #F7D76B;
             line-height: 1.3;
             margin-bottom: 0.2rem;
         }
 
         .article-meta {
-            color: #666;
+            color: #BFC3C9;
             font-size: 0.86rem;
             margin-top: 0;
         }
 
         .article-preview {
-            color: #2f3542;
+            color: #ECEFF4;
             font-size: 0.95rem;
             line-height: 1.45;
             margin-top: 0.35rem;
@@ -62,8 +71,9 @@ def apply_page_style():
         }
 
         .detail-box {
-            background: #fff;
-            border: 1px solid #d6dbdf;
+            background: #121212;
+            color: #F5F5F5;
+            border: 1px solid #2f3640;
             border-radius: 12px;
             padding: 14px 16px;
             line-height: 1.8;
@@ -78,9 +88,9 @@ def apply_page_style():
 
         [data-testid="stMain"] div[data-testid="stVerticalBlockBorderWrapper"] {
             border-radius: 10px !important;
-            border: none !important;
-            background: #ffffff !important;
-            box-shadow: 0 2px 10px rgba(241, 196, 15, 0.18) !important;
+            border: 1px solid #2a2a2a !important;
+            background: #0f0f0f !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.45) !important;
         }
 
         [data-testid="stMain"] .stButton > button {
